@@ -8,4 +8,9 @@ class Users extends BaseController
     {
         return view('users/landingPage');
     }
+
+    public function moodBoardPage(): string
+    {
+        return view('users/moodBoardPage');
+    }
 }
