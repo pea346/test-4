@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Users::index');
 $routes->get('/moodBoardPage', 'Users::moodBoardPage');
+$routes->get('/roadMapPage', 'Users::roadMapPage');
