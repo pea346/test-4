@@ -1,13 +1,16 @@
 <?php
 // Component: components/head.php
 // Data contract:
-// $title: string
+// $heading: string
+// $sub: string|null
+// $primary: object
+// $secondary: object
 ?>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><?= esc($title ?? null ? $title . ": " : "") ?>Sample kaya to hahahahaha!!!!</title>
+    <title><?= esc($title ?? null ? $title . ": " : "") ?>Sunset Funeral Homes</title>
 
     <!-- Default CDN includes -->
     <!-- Google Fonts: Playfair Display + Lato (global) -->
