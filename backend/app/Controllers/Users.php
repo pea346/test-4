@@ -6,26 +6,26 @@ class Users extends BaseController
 {
     public function index(): string
     {
-        return view('users/landingPage');
+        return view('user/landingPage');
     }
 
     public function moodBoardPage(): string
     {
-        return view('users/moodBoardPage');
+        return view('user/moodBoardPage');
     }
 
     public function roadMapPage(): string
     {
-        return view('users/roadMapPage');
+        return view('user/roadMapPage');
     }
 
     public function signUpPage(): string
     {
-        return view('users/signUpPage');
+        return view('user/signUpPage');
     }
 
     public function loginPage(): string
     {
-        return view('users/loginPage');
+        return view('user/loginPage');
     }
 }
