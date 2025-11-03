@@ -5,16 +5,15 @@
 
 <div align="center">
   <a href="https://github.com/pea346">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="images/CAFENOD.png" alt="Nyebe" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">CAFENOD</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+Cafenod is a website built using CodeIgniter 4, designed for a coffee house. It features a landing page with a hero section, product cards, and a call-to-action. The site also includes login and signup pages for user authentication, a mood board showcasing the brand's visual style, and a roadmap outlining the project's development.
 </div>
 
 <br/>
@@ -55,22 +54,23 @@ It helps teams quickly bootstrap backend + frontend projects, with simple sample
 
 ## Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
+Cafenod is a website for a coffee house, designed to showcase its brand, products, and roadmap. It provides users with information and a visually appealing experience.
 
-It is designed to be **easy to start with** and a **reference for adding new features**.
-
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
+Target Audience: Potential customers of the coffee house
 
 ### Key Components
 
 These are **sample modules** included (or suggested) for learning how to add features:
 
-| Component                 | Purpose                                                             | Notes                                                   |
+| Component       | Purposse | Notes              |
 | ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| **Auth (Sample)**         | Basic login/logout and (likely) role check (though role check isn't explicitly visible in the provided code snippets).                     | The pages likely use a database to store user credentials.         |
+| **CRUD Module**           | To manage entities (like products, menu items, etc.) with create/read/update/delete operations. I don't see a specific CRUD module in these files, but I can infer its potential use.
+ | The roadMapPage.php mentions "Product Management" with "add, view, edit, and delete options," suggesting a CRUD module is planned or exists. Demonstrates Controller → Service → Repository pattern. |
+| **Scheduler (Sample)**    | To manage scheduled tasks or events            | It includes a hero section with a title, description, and primary/secondary buttons.
+It displays cards showcasing features or products.
+It includes a CTA (Call to Action) section.
+It includes a header and footer component. Shows how to extend with new tables and services.       |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
