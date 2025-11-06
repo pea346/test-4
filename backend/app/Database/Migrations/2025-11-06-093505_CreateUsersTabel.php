@@ -35,7 +35,7 @@ class CreateUsersTabel extends Migration
                 'constraint' => 255,
                 'null'       => false,
             ],
-            'gender' => [
+            'sex' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 20,
                 'null'       => true,
