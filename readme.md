@@ -163,7 +163,7 @@ Defaults used in this project (host mapping):
 Database credentials used in examples and CI:
 
 - Host: localhost
-- Port: 3390
+- Port: 3391
 - Database: app
 - User: root
 - Password: root
