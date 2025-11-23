@@ -12,3 +12,4 @@ $routes->get('/signUpPage', 'Users::signUpPage');
 $routes->get('/loginPage', 'Users::loginPage');
 
 $routes->get('dashboard', 'Admin::dashboard');
+$routes->get('service', 'Admin::service');

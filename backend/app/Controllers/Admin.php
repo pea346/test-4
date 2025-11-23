@@ -8,4 +8,9 @@ class Admin extends BaseController
     {
         return view('admin/dashboard');
     }
+
+    public function service(): string
+    {
+        return view('admin/service');
+    }
 }
