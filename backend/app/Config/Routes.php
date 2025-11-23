@@ -14,3 +14,4 @@ $routes->get('/loginPage', 'Users::loginPage');
 $routes->get('dashboard', 'Admin::dashboard');
 $routes->get('service', 'Admin::service');
 $routes->get('accounts', 'Admin::accounts');
+$routes->get('request', 'Admin::request');
