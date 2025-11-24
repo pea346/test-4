@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,8 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #111;
             color: white;
-            padding-top: 100px; /* prevents overlap with fixed header */
+            padding-top: 100px;
+            /* prevents overlap with fixed header */
         }
 
         /* Header layout */
@@ -24,14 +26,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px 15px 40px; /* added more space on right */
+            padding: 15px 20px 15px 40px;
+            /* added more space on right */
             background-color: rgba(17, 17, 17, 0.0);
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(0px);
         }
 
         /* Logo styling */
@@ -54,7 +57,8 @@
             display: flex;
             gap: 35px;
             margin: 0;
-            padding-right: 30px; /* extra breathing space for last item */
+            padding-right: 30px;
+            /* extra breathing space for last item */
         }
 
         nav a {
@@ -85,24 +89,26 @@
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">
-        <a href="<?= base_url('/') ?>">
-            <img src="<?= base_url('images/CAFENOD.png') ?>" alt="Cafenod Logo">
-        </a>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="<?= base_url('/') ?>">HOME</a></li>
-            <li><a href="<?= base_url('moodBoardPage') ?>">MOOD BOARD</a></li>
-            <li><a href="<?= base_url('roadMapPage') ?>">ROAD MAP</a></li>
-            <li><a href="<?= base_url('loginPage') ?>">LOG IN</a></li>
-            <li><a href="<?= base_url('signUpPage') ?>">SIGN UP</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <div class="logo">
+            <a href="<?= base_url('/') ?>">
+                <img src="<?= base_url('images/CAFENOD.png') ?>" alt="Cafenod Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="<?= base_url('/') ?>">HOME</a></li>
+                <li><a href="<?= base_url('moodBoardPage') ?>">MOOD BOARD</a></li>
+                <li><a href="<?= base_url('roadMapPage') ?>">ROAD MAP</a></li>
+                <li><a href="<?= base_url('loginPage') ?>">LOG IN</a></li>
+                <li><a href="<?= base_url('signUpPage') ?>">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
 
 </body>
+
 </html>
