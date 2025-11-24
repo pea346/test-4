@@ -129,9 +129,84 @@
   <?= view('components/header') ?>
   <div class="form-container">
     <h1>Sign Up</h1>
-    <form method="post" action="">
-      <label>Email:</label>
-      <input type="email" name="email" required>
+    <form class="space-y-6 mt-8" action="/signup" method="post" novalidate>
+      <?php
+      $errors = $errors ?? [];
+      $old = $old ?? [];
+      ?>
+
+      <?php if (session()->getFlashdata('success')): ?>
+          <div class="alert alert-success">
+              <?= session()->getFlashdata('success') ?>
+          </div>
+      <?php endif; ?>
+
+      <?php if (session()->getFlashdata('errors')): ?>
+          <div class="alert alert-danger">
+              <ul>
+                  <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                      <li><?= esc($error) ?></li>
+                  <?php endforeach; ?>
+              </ul>
+          </div>
+      <?php endif; ?>
+
+      <label for="first_name">First Name:</label>
+      <input
+          id="first_name"
+          name="first_name"
+          type="text"
+          required
+          value="<?= esc($old['first_name'] ?? '') ?>"
+          aria-invalid="<?= isset($errors['first_name']) ? 'true' : 'false' ?>"
+          aria-describedby="first_name-error"
+      >
+      <?php if (! empty($errors['first_name'])): ?>
+          <p id="first_name-error" class="mt-2 text-red-600 text-sm"><?= esc($errors['first_name']) ?></p>
+      <?php endif; ?>
+
+      <label for="last_name">Last Name:</label>
+      <input
+          id="last_name"
+          name="last_name"
+          type="text"
+          required
+          value="<?= esc($old['last_name'] ?? '') ?>"
+          aria-invalid="<?= isset($errors['last_name']) ? 'true' : 'false' ?>"
+          aria-describedby="last_name-error"
+      >
+      <?php if (! empty($errors['last_name'])): ?>
+          <p id="last_name-error" class="mt-2 text-red-600 text-sm"><?= esc($errors['last_name']) ?></p>
+      <?php endif; ?>
+
+      <label for="phone_number">Phone Number:</label>
+      <input
+          id="phone_number"
+          name="phone_number"
+          type="text"
+          required
+          value="<?= esc($old['phone_number'] ?? '') ?>"
+          aria-invalid="<?= isset($errors['phone_number']) ? 'true' : 'false' ?>"
+          aria-describedby="phone_number-error"
+      >
+      <?php if (! empty($errors['phone_number'])): ?>
+          <p id="phone_number-error" class="mt-2 text-red-600 text-sm"><?= esc($errors['phone_number']) ?></p>
+      <?php endif; ?>
+
+      <label for="email">Email:</label>
+      <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+          value="<?= esc($old['email'] ?? '') ?>"
+          aria-invalid="<?= isset($errors['email']) ? 'true' : 'false' ?>"
+          aria-describedby="email-error"
+      >
+      <?php if (! empty($errors['email'])): ?>
+          <p id="email-error" class="mt-2 text-red-600 text-sm"><?= esc($errors['email']) ?></p>
+      <?php endif; ?>
 
       <label>Password:</label>
       <input type="password" name="password" required>

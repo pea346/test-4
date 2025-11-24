@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Log In</title>
@@ -9,7 +10,8 @@
       margin: 0;
       padding: 0;
       color: #fff;
-      background-color: #111; /* Dark theme */
+      background-color: #111;
+      /* Dark theme */
       background-image: url('/images/coffee_login.jpg');
       background-size: cover;
       background-repeat: no-repeat;
@@ -91,19 +93,19 @@
       transition: all 0.3s ease;
       font-family: 'Montserrat', sans-serif;
       margin-top: 30px;
-      box-shadow: 0px 3px 8px rgba(210,180,140,0.4);
+      box-shadow: 0px 3px 8px rgba(210, 180, 140, 0.4);
     }
 
     .return-btn:hover {
       background-color: #c19a6b;
       color: #fff;
       transform: translateY(-3px);
-      box-shadow: 0px 6px 14px rgba(210,180,140,0.7), 0px 0px 12px rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 6px 14px rgba(210, 180, 140, 0.7), 0px 0px 12px rgba(255, 255, 255, 0.1);
     }
 
     .return-btn:active {
       transform: scale(0.97);
-      box-shadow: 0px 2px 6px rgba(210,180,140,0.5);
+      box-shadow: 0px 2px 6px rgba(210, 180, 140, 0.5);
     }
 
     /* Sign Up link styling */
@@ -120,16 +122,48 @@
       color: #D2B48C;
       text-decoration: underline;
     }
-
   </style>
 </head>
+
 <body>
-<?= view('components/header') ?>
+  <?= view('components/header') ?>
   <div class="form-container">
     <h1>Login Page</h1>
-    <form method="post" action="">
-      <label>Email:</label>
-      <input type="email" name="email" required>
+    <form class="space-y-6 mt-8" action="/login" method="post" novalidate>
+      <?php
+      $errors = $errors ?? [];
+      $old = $old ?? [];
+      ?>
+
+      <?php if (session()->getFlashdata('success')): ?>
+          <div class="alert alert-success">
+              <?= session()->getFlashdata('success') ?>
+          </div>
+      <?php endif; ?>
+
+      <?php if (session()->getFlashdata('errors')): ?>
+          <div class="alert alert-danger">
+              <ul>
+                  <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                      <li><?= esc($error) ?></li>
+                  <?php endforeach; ?>
+              </ul>
+          </div>
+      <?php endif; ?>
+
+      <label for="email">Email:</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+        value="<?= esc($old['email'] ?? '') ?>"
+        aria-invalid="<?= isset($errors['email']) ? 'true' : 'false' ?>"
+        aria-describedby="email-error">
+      <?php if (! empty($errors['email'])): ?>
+        <p id="email-error" class="mt-2 text-red-600 text-sm"><?= esc($errors['email']) ?></p>
+      <?php endif; ?>
 
       <label>Password:</label>
       <input type="password" name="password" required>
@@ -144,4 +178,5 @@
     </form>
   </div>
 </body>
+
 </html>
