@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Sign Up - Cafenod</title>
@@ -91,19 +92,19 @@
       transition: all 0.3s ease;
       font-family: 'Montserrat', sans-serif;
       margin-top: 30px;
-      box-shadow: 0px 3px 8px rgba(210,180,140,0.4);
+      box-shadow: 0px 3px 8px rgba(210, 180, 140, 0.4);
     }
 
     .return-btn:hover {
       background-color: #c19a6b;
       color: #fff;
       transform: translateY(-3px);
-      box-shadow: 0px 6px 14px rgba(210,180,140,0.7), 0px 0px 12px rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 6px 14px rgba(210, 180, 140, 0.7), 0px 0px 12px rgba(255, 255, 255, 0.1);
     }
 
     .return-btn:active {
       transform: scale(0.97);
-      box-shadow: 0px 2px 6px rgba(210,180,140,0.5);
+      box-shadow: 0px 2px 6px rgba(210, 180, 140, 0.5);
     }
 
     /* Login link styling */
@@ -120,12 +121,12 @@
       color: #D2B48C;
       text-decoration: underline;
     }
-
   </style>
 </head>
+
 <body>
 
-<?= view('components/header') ?>
+  <?= view('components/header') ?>
   <div class="form-container">
     <h1>Sign Up</h1>
     <form method="post" action="">
@@ -148,4 +149,5 @@
     </form>
   </div>
 </body>
+
 </html>
